@@ -8,7 +8,7 @@
             "name": "Python: Attach",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/problem2.py"
+            "program": "${workspaceFolder}/test.py"
         }
     ]
 }
