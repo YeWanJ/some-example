@@ -27,3 +27,4 @@ for m in range(2, num):
             continue
     else:
         continue
+        
