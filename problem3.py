@@ -1,30 +1,21 @@
 from sys import exit
+import math
 
 
-def Pri(N):
-    for i in range(2, N):
-        for j in range(2, N):
-            if i * j == N:    # 证明非质数
-                return False
-        if i * i <= N:
-            continue
-        else:
+def IsPrime(n):
+    if n % 2 == 0:
+        return False
+    i = 3
+    for a in range(2, int(math.sqrt(n)) + 1):
+        if n % a == 0:
             return False
     return True
 
 
 num = 600851475143
-for m in range(2, num):
-    if m * m <= num:
-        if num % m == 0:
-            large = num // m
-            if Pri(large):
-                print("The answer is: ", large)
-                exit(0)
-            else:
-                continue
-        else:
-            continue
-    else:
-        continue
-        
+sqrt = int(math.sqrt(num))
+for large in range(sqrt + 1, 2, -1):
+    if num % large == 0:
+        if IsPrime(large):
+            print("The largest prime factor of the number is: ", large)
+            exit(0)
