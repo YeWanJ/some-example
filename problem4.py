@@ -1,11 +1,9 @@
-from sys import exit
 
-
-for M in range(999, 99, -1):
-    for N in range(999, 99, -1):
-        ans = M * N
-        ans = str(ans)
-        if ans == ans[::-1]:
-            print(
-                " the largest palindrome made from the product of two 3-digit numbers is: ", ans)
-            exit(0)
+largest = 0
+for i in range(100, 1000):
+    for j in range(100, 1000):
+        product = i * j
+        strProduct = str(product)
+        if strProduct == strProduct[::-1] and product > largest:
+            largest = product
+print(largest)
