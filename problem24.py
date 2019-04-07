@@ -17,6 +17,7 @@ while(sum1 != 0):
     sum1 = sum1 % a
     n -= 1
 
+
 for j in range(len(alist)):
     astr += alist[j]
 print("The 1000001th is: ", astr)
